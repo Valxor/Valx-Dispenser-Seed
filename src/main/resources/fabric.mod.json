@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "valxdispenserseed",
+	"version": "${version}",
+	"name": "valxdispenserseed",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/valxdispenserseed/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.valxor.dispenserseed.Valxdispenserseed"
+		],
+		"client": [
+			"com.valxor.dispenserseed.ValxdispenserseedClient"
+		]
+	},
+	"mixins": [
+		"valxdispenserseed.mixins.json",
+		{
+			"config": "valxdispenserseed.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.7",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
